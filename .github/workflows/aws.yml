@@ -16,10 +16,10 @@ on:
   release:
     types: [created]
 
-name: Deploy to Amazon ECS
+name: Publish to Amazon ECR
 
 jobs:
-  deploy:
+  publish:
     name: Deploy
     runs-on: ubuntu-latest
     environment: production
