@@ -12,21 +12,21 @@
 #    See the documentation for each action used below for the recommended IAM policies for this IAM user,
 #    and best practices on handling the access key credentials.
 
-# on:
-#   release:
-#     types: [created]
-
-
 on:
-  push:
-    tags:
-      - 'v*.*.*'
+  release:
+    types: [created]
+
+
+# on:
+#   push:
+#     tags:
+#       - 'v*.*.*'
 
 name: Publish to Amazon ECR
 
 jobs:
   publish:
-    name: Deploy
+    name: Publish
     runs-on: ubuntu-latest
     environment: production
 
